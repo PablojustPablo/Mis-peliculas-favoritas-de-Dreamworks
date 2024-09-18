@@ -1,0 +1,160 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    background: #000;
+    padding: 36px;
+    box-sizing: border-box;
+}
+
+/* Estilos para iconos en general */
+.icono {
+    font-size: 20px;
+}
+
+/* Definición de la fuente personalizada "Dreamworks" */
+@font-face {
+    font-family: "Dreamworks";
+    src: url(fuentedreamworks.ttf) format("ttf");
+}
+
+/* Estilos para el título principal */
+.titulo {
+    color: #ffffff;
+    margin-top: -30px;
+    font-family: "Dreamworks", sans-serif;
+    font-size: 30px;
+    line-height: 1.4;
+    letter-spacing: .02em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-rendering: optimizeLegibility;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.76);
+    padding: 1rem;
+}
+
+/* Estilos para la posición y alineación del logo en la parte inferior */
+.logoabajo {
+    bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #000000;
+    height: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para contenedores flexibles */
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+/* Estilos para las imágenes de las películas */
+.megamente,
+.shrek,
+.elgatoconbotas,
+.beemovie,
+.kungfupanda,
+.madagascar {
+    position: relative;
+    width: 250px;
+    transition: all .3s ease;
+    margin: auto;
+}
+
+/* Estilos para las sombras y bordes de las imágenes */
+.megamente img:first-child,
+.shrek img:first-child,
+.elgatoconbotas img:first-child,
+.beemovie img:first-child,
+.kungfupanda img:first-child,
+.madagascar img:first-child {
+    box-shadow: 0 60px 60px -60px rgba(252, 248, 13, 0.548);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Estilos para la posición y animación de las segundas imágenes */
+.kungfupanda img:last-child,
+.madagascar img:last-child,
+.beemovie img:last-child,
+.megamente img:last-child,
+.shrek img:last-child,
+.elgatoconbotas img:last-child {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+}
+
+/* Estilos para la transformación y animación al hacer hover sobre las imágenes */
+.kungfupanda:hover,
+.madagascar:hover,
+.beemovie:hover,
+.megamente:hover,
+.shrek:hover,
+.elgatoconbotas:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+/* Estilos para los gradientes y opacidad adicionales al hacer hover */
+.kungfupanda::before,
+.madagascar::before,
+.beemovie::before,
+.megamente::before,
+.shrek::before,
+.elgatoconbotas::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0) 95%
+    );
+    opacity: 0;
+    transition: all 0.1s ease;
+}
+
+/* Estilos para aumentar la opacidad y la posición de la segunda imagen al hacer hover */
+.kungfupanda:hover::before,
+.madagascar:hover::before,
+.beemovie:hover::before,
+.megamente:hover::before,
+.shrek:hover::before,
+.elgatoconbotas:hover::before {
+    opacity: 1;
+}
+
+.kungfupanda:hover img:last-child,
+.madagascar:hover img:last-child,
+.beemovie:hover img:last-child,
+.megamente:hover img:last-child,
+.shrek:hover img:last-child,
+.elgatoconbotas:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%);
+}
